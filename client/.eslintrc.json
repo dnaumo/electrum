@@ -32,6 +32,6 @@
         "react/jsx-props-no-spreading": ["warn"],
         "react/no-unescaped-entities": ["off"],
         "import/prefer-default-export": "off",
-        "no-param-reassign": ["error", { "props": false }]
+        "no-param-reassign": ["error", { "props": true, "ignorePropertyModificationsFor": ["state"] }]
     }
 }
