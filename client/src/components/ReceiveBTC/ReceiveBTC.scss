@@ -1,0 +1,12 @@
+.form.receive-btc {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  .title {
+    color: #B5B5C3;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+  }
+}

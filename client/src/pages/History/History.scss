@@ -1,0 +1,60 @@
+.container.history-page {
+  height: 100%;
+
+  .transactions-grid {
+    border: 1px solid #EBEEF5;
+    border-radius: 8px;
+
+    .MuiDataGrid-columnSeparator {
+      visibility: hidden;
+    }
+
+    .MuiDataGrid-columnHeaderTitleContainerContent > div {
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 19px;
+      color: #5E6D82;
+    }
+
+    .MuiDataGrid-cellContent {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 19px;
+      color: #5E6D82;
+    }
+
+    .status {
+      padding: 5px 8px;
+      font-size: 12px;
+      line-height: 15px;
+      border-radius: 6px;
+
+      &.unconfirmed {
+        background: #FDF6EC;
+        color: #E6A23C;
+        border: 1px solid #FAECD8;
+      }
+
+      &.succeeded {
+        background: #F2F9EC;
+        border: 1px solid #E4F2DA;
+        border-radius: 6px;
+        color: #7FBF51;
+      }
+    }
+
+    .amount {
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 19px;
+
+      &.green {
+        color: #67C23A;
+      }
+
+      &.red {
+        color: #F56C6C;
+      }
+    }
+  }
+}

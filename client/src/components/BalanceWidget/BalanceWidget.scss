@@ -1,0 +1,52 @@
+.balance-widget {
+  padding: 20px 24px;
+  width: max-content;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  .title {
+    color: #B5B5C3;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+  }
+
+  .balance {
+    color: #111111;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  .link {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+
+    &:not(:hover) {
+      color: #0599FC;
+
+      svg {
+        stroke: #0599FC;
+      }
+    }
+
+    &:hover {
+      color: #1C54DA;
+
+      svg {
+        stroke: #1C54DA;
+      }
+    }
+
+    svg {
+      width: 15px;
+      height: 15px;
+    }
+  }
+}

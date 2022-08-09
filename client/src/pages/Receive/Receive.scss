@@ -1,0 +1,18 @@
+.container.receive-page {
+  display: flex;
+  gap: 40px;
+
+  & > * {
+    flex-basis: 50%;
+  }
+
+  .form.receive-btc {
+    box-shadow: 0 0 12px rgba(157, 173, 187, 0.25);
+  }
+
+  .info-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+}

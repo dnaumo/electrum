@@ -1,0 +1,28 @@
+version: '3.7'
+
+services:
+  server:
+    build:
+      context: ./server
+      dockerfile: ../docker/python.dockerfile
+      args:
+        ELECTRUM_VERSION: 3.3.8
+        ELECTRUM_USER: ${ELECTRUM_USER}
+        ELECTRUM_HOME: /home/${ELECTRUM_USER}
+    container_name: server
+    environment:
+      - ELECTRUM_USER=${ELECTRUM_USER}
+      - ELECTRUM_PASSWORD=${ELECTRUM_PASSWORD}
+      - WALLET_PASSPHRASE=${WALLET_PASSPHRASE}
+      - TESTNET=${TESTNET}
+    ports:
+      - "127.0.0.1:7000:7000"
+  client:
+    image: node:18
+    command: sh -c "${NODE_COMMAND}"
+    container_name: client
+    working_dir: /electrum/client
+    volumes:
+      - ./:/electrum/
+    ports:
+      - "3000:3000"

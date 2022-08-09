@@ -1,0 +1,33 @@
+.container.home-page {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  .info {
+    display: flex;
+    gap: 32px;
+
+    .alert-wrapper {
+      flex: 1;
+    }
+  }
+
+  .actions {
+    display: flex;
+    gap: 40px;
+
+    & > * {
+      flex-basis: 50%;
+    }
+
+    .form {
+      &.send-btc {
+        border: 1px solid #0599FC;
+      }
+
+      &.receive-btc {
+        border: 1px solid #67C23A;
+      }
+    }
+  }
+}
