@@ -1,8 +1,8 @@
-import History from "../pages/History/History";
-import Home from "../pages/Home/Home";
-import Receive from "../pages/Receive/Receive";
-import Send from "../pages/Send/Send";
-import Settings from "../pages/Settings/Settings";
+import History from "../pages/History";
+import Home from "../pages/Home";
+import Receive from "../pages/Receive";
+import Send from "../pages/Send";
+import Settings from "../pages/Settings";
 
 export interface IRoute {
   key: string;

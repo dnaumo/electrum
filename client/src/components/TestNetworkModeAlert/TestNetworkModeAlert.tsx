@@ -1,6 +1,6 @@
 import "./TestNetworkModeAlert.scss";
 
-function TestNetworkModeAlert() {
+export function TestNetworkModeAlert() {
   return (
     <div className="alert-wrapper">
       <div className="alert">
@@ -13,5 +13,3 @@ function TestNetworkModeAlert() {
     </div>
   );
 }
-
-export default TestNetworkModeAlert;

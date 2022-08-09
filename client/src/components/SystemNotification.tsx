@@ -16,7 +16,7 @@ function SystemNotification() {
 
       dispatch(systemErrorSlice.actions.stateReset());
     },
-    [],
+    [dispatch],
   );
 
   return (

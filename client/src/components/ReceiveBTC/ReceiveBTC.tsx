@@ -23,7 +23,7 @@ type FormValues = {
   expiration: number;
 };
 
-function ReceiveBTC() {
+export function ReceiveBTC() {
   const dispatch = useAppDispatch();
   const {
     register,
@@ -106,5 +106,3 @@ function ReceiveBTC() {
     </form>
   );
 }
-
-export default ReceiveBTC;

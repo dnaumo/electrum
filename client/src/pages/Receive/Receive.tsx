@@ -1,9 +1,9 @@
-import BalanceWidget from "../../components/BalanceWidget/BalanceWidget";
-import ReceiveBTC from "../../components/ReceiveBTC/ReceiveBTC";
-import TestNetworkModeAlert from "../../components/TestNetworkModeAlert/TestNetworkModeAlert";
+import BalanceWidget from "../../components/BalanceWidget";
+import ReceiveBTC from "../../components/ReceiveBTC";
+import TestNetworkModeAlert from "../../components/TestNetworkModeAlert";
 import "./Receive.scss";
 
-function Receive() {
+export function Receive() {
   return (
     <div className="container receive-page">
       <ReceiveBTC />
@@ -14,5 +14,3 @@ function Receive() {
     </div>
   );
 }
-
-export default Receive;

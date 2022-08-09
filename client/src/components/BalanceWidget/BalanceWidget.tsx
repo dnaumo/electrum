@@ -8,7 +8,7 @@ interface IBalanceWidgetProps {
   withHistory: boolean;
 }
 
-function BalanceWidget({ withHistory }: IBalanceWidgetProps) {
+export function BalanceWidget({ withHistory }: IBalanceWidgetProps) {
   const { balance } = useAppSelector((state) => state.balance);
 
   return (
@@ -23,5 +23,3 @@ function BalanceWidget({ withHistory }: IBalanceWidgetProps) {
     </div>
   );
 }
-
-export default BalanceWidget;

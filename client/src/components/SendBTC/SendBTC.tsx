@@ -18,7 +18,7 @@ type FormValues = {
   memo: string;
 };
 
-function SendBTC() {
+export function SendBTC() {
   const dispatch = useAppDispatch();
 
   const {
@@ -93,5 +93,3 @@ function SendBTC() {
     </form>
   );
 }
-
-export default SendBTC;

@@ -1,10 +1,10 @@
 import "./Home.scss";
-import BalanceWidget from "../../components/BalanceWidget/BalanceWidget";
-import ReceiveBTC from "../../components/ReceiveBTC/ReceiveBTC";
-import SendBTC from "../../components/SendBTC/SendBTC";
-import TestNetworkModeAlert from "../../components/TestNetworkModeAlert/TestNetworkModeAlert";
+import BalanceWidget from "../../components/BalanceWidget";
+import ReceiveBTC from "../../components/ReceiveBTC";
+import SendBTC from "../../components/SendBTC";
+import TestNetworkModeAlert from "../../components/TestNetworkModeAlert";
 
-function Home() {
+export function Home() {
   return (
     <div className="container home-page">
       <div className="info">
@@ -18,5 +18,3 @@ function Home() {
     </div>
   );
 }
-
-export default Home;

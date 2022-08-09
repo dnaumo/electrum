@@ -12,7 +12,7 @@ import { useAppDispatch, useAppSelector } from "../../hooks/redux";
 import { ITransaction } from "../../models/models";
 import { fetchTransactions } from "../../store/actions/historyActions";
 
-function History() {
+export function History() {
   const dispatch = useAppDispatch();
   const { error, loading, history } = useAppSelector((state) => state.history);
 
@@ -38,15 +38,13 @@ function History() {
       headerName: "Status",
       width: 140,
       sortable: false,
-      renderCell: (params: GridRenderCellParams) => (
-        <>
-          {params.row.confirmations > 6 ? (
-            <div className="status succeeded">Succeeded</div>
-          ) : (
-            <div className="status unconfirmed">Unconfirmed</div>
-          )}
-        </>
-      ),
+      renderCell: (params: GridRenderCellParams) => {
+        return params.row.confirmations > 6 ? (
+          <div className="status succeeded">Succeeded</div>
+        ) : (
+          <div className="status unconfirmed">Unconfirmed</div>
+        );
+      },
     },
     {
       field: "amount",
@@ -54,15 +52,13 @@ function History() {
       width: 140,
       valueGetter: getAmount,
       sortable: false,
-      renderCell: (params: GridRenderCellParams) => (
-        <>
-          {params.row.incoming ? (
-            <div className="amount green">+ {Math.abs(params.row.value)}</div>
-          ) : (
-            <div className="amount red">- {Math.abs(params.row.value)}</div>
-          )}
-        </>
-      ),
+      renderCell: (params: GridRenderCellParams) => {
+        return params.row.incoming ? (
+          <div className="amount green">+ {Math.abs(params.row.value)}</div>
+        ) : (
+          <div className="amount red">- {Math.abs(params.row.value)}</div>
+        );
+      },
     },
     { field: "balance", headerName: "Balance", sortable: false, width: 140 },
   ];
@@ -94,5 +90,3 @@ function History() {
     </div>
   );
 }
-
-export default History;

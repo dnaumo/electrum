@@ -1,9 +1,9 @@
-import BalanceWidget from "../../components/BalanceWidget/BalanceWidget";
-import SendBTC from "../../components/SendBTC/SendBTC";
-import TestNetworkModeAlert from "../../components/TestNetworkModeAlert/TestNetworkModeAlert";
+import BalanceWidget from "../../components/BalanceWidget";
+import SendBTC from "../../components/SendBTC";
+import TestNetworkModeAlert from "../../components/TestNetworkModeAlert";
 import "./Send.scss";
 
-function Send() {
+export function Send() {
   return (
     <div className="container send-page">
       <SendBTC />
@@ -14,5 +14,3 @@ function Send() {
     </div>
   );
 }
-
-export default Send;

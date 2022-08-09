@@ -9,7 +9,7 @@ import { usePathname } from "../../hooks/router";
 import { fetchBalance } from "../../store/actions/balanceActions";
 import logo from "../../svg/logo.svg";
 
-function Navigation() {
+export function Navigation() {
   const currentPath = usePathname();
   const dispatch = useAppDispatch();
   const { balance } = useAppSelector((state) => state.balance);
@@ -51,5 +51,3 @@ function Navigation() {
     </header>
   );
 }
-
-export default Navigation;

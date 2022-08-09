@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import Navigation from "./components/Navigation/Navigation";
+import Navigation from "./components/Navigation";
 import SystemNotification from "./components/SystemNotification";
 import { routes } from "./constants/routes";
 
